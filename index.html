@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#08080d">
+  <meta name="description" content="AI Teman — teman ngobrol dengan suara.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <title>AI Teman</title>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand"><span class="brandmark"><i></i><i></i><b></b></span><span>AI Teman</span></div>
+      <span class="pill"><span class="dot"></span> SIAP</span>
+    </header>
+
+    <section class="stage" aria-live="polite">
+      <div id="mascot" class="mascot idle" aria-label="Maskot AI Teman">
+        <div class="glow"></div>
+        <div class="head">
+          <div class="eyes"><span class="eye"></span><span class="eye"></span></div>
+          <div class="mouth"></div>
+        </div>
+      </div>
+      <div class="soundwave" id="soundwave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="status" id="status">AI TEMAN SIAP</div>
+      <p id="hint" class="hint">Tekan mikrofon dan mulailah berbicara.</p>
+    </section>
+
+    <section class="messages" id="messages" aria-label="Percakapan">
+      <div class="message bot">Halo! 👋 Aku AI Teman. Kamu bisa bicara denganku atau mengetik pesan.</div>
+    </section>
+
+    <div class="controls">
+      <button class="small-button" id="keyboardBtn" aria-label="Ketik pesan" title="Ketik pesan">⌨</button>
+      <button class="mic-button" id="micBtn" aria-label="Mulai berbicara"><span class="mic-icon">🎙</span></button>
+      <button class="small-button" id="stopBtn" aria-label="Hentikan suara" title="Hentikan suara">■</button>
+    </div>
+    <form id="textForm" class="text-form hidden">
+      <input id="textInput" autocomplete="off" placeholder="Tulis pesan di sini…">
+      <button type="submit">Kirim</button>
+    </form>
+    <div class="footer-note">DENGARKAN <span>•</span> BERPIKIR <span>•</span> BERBICARA</div>
+    <p class="disclaimer">Versi demo: jawaban AI masih sederhana. Fitur suara bergantung pada dukungan browser dan perangkat.</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
